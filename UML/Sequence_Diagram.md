@@ -5,7 +5,7 @@
 
 ## 구성요소
 
-<img src="https://github.com/dongseoklee1541/programming_concept/pic/sequence-diagram-overview.png">
+<img src="https://github.com/dongseoklee1541/programming_concept/blob/master/pic/sequence-diagram-overview.png?raw">
 
 > 시퀸스 다이어그램을 구성하는 주요 요소
 
@@ -16,7 +16,7 @@ Lifeline은 시퀸스 다이어그램 상의 독립적인 참여자를 나타낸
 Lifeline의 symbol은 아래와 같이 사각형 형태에 수직선이 연결되어 있는 모습이고, 사각형 안에 Lifeline(참여자)에 대한 정보를 나타내고
 수직선은 해당 참여자의 생명선을 나타낸다.
 
-<img src="pic/object_lifeline.png">
+<img src="https://github.com/dongseoklee1541/programming_concept/blob/master/pic/object_lifeline.png?raw=true">
 
 > object와 Lifeline
 
@@ -25,13 +25,13 @@ Lifeline의 symbol은 아래와 같이 사각형 형태에 수직선이 연결�
 서로 다른 객체간의 **상호작용 혹은 의사소통 통신을 정의하는 요소.** 하나의 객체 라이프라인으로 부터 다른 객체 라이프라인까지 선+화살표로 표시되며
 메시지는 그 선의 위에 표시
 
-<img src="pic/message.png">
+<img src="https://github.com/dongseoklee1541/programming_concept/blob/master/pic/message.png?raw=true">
 
 > 메시지
 
 #### 메시지 유형
 
-<img src="pic/message_type.png">
+<img src="https://github.com/dongseoklee1541/programming_concept/blob/master/pic/message_type.png?raw=true">
 
 메시지 유형에 따른 선 모양과 화살표 모양을 꼭 기억하자.
 
@@ -51,7 +51,7 @@ Gate는 (시퀀스 다이어그램 내부)Message의 끝으로, 시퀀스 다이
 
 ### 활성 박스(Activation Box)
 
-<img src="pic/activation_box.png">
+<img src="https://github.com/dongseoklee1541/programming_concept/blob/master/pic/activation_box.png?raw=true">
 
 > 활성 박스(Activation Box)
 
