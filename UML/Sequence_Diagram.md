@@ -5,7 +5,7 @@
 
 ## 구성요소
 
-<img src="pic/sequence-diagram-overview.png">
+<img src="https://github.com/dongseoklee1541/programming_concept/pic/sequence-diagram-overview.png">
 
 > 시퀸스 다이어그램을 구성하는 주요 요소
 
