@@ -2,5 +2,4 @@
 
 WEB 서버와 클라이언트 간에 통신 규약(프로토콜)이다. 기본적인 순서는 클라이언트가 서버에게 요청하고(Request) 요청을 받은 서버는 클라이언트에게 답변(Response)를 한다.
 
-
-
+<img src="https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png">
