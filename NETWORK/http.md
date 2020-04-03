@@ -17,3 +17,7 @@ Request(요청)과 Response(응답)의 구조는 서로 비슷하다.
 ----
 
 출처 : https://developer.mozilla.org/ko/docs/Web/HTTP/Messages
+
+
+## Client max body size?
+Nginx에선 Client max body size라는 옵션이 있는데, request body의 길이를 제한하는 옵션이다. 즉 'Content-Length'를 제한한다.(413 에러 발생) 
