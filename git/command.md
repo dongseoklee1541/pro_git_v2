@@ -18,7 +18,12 @@
 * git checkout <name> : 해당하는 <name>의 브랜치로 변경 후 그 상태로 간다.
  
 ## Merge
-master 상태일때 Merge해야 한다.(checkout master)
+master 상태일때 Merge해야 한다.(checkout master) 파일의 이름이 다르면 복사되어 병합되고, 같은 파일 이름이더라도 다른 부분이 수정된다면 merge된다.
 
 * git merge <branch-name> : Merge가 되고, 이때 어떤 이유로 merge하는지에 대해 작성해주면 된다.
  * git reset --hard <code> : merge를 되돌리고 싶다면 reset --hard 를 실행하자.
+
+#### conflict
+만약 merge를 할때, 같은 파일의 같은 라인이 동시에 변경이 되있다면 git은 merge할수 없는 상황이라고 알려준다. 이때 사용자가 직접 수정한 뒤
+merge를 해줘야 한다.
+
