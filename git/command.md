@@ -27,3 +27,13 @@ master 상태일때 Merge해야 한다.(checkout master) 파일의 이름이 다
 만약 merge를 할때, 같은 파일의 같은 라인이 동시에 변경이 되있다면 git은 merge할수 없는 상황이라고 알려준다. 이때 사용자가 직접 수정한 뒤
 merge를 해줘야 한다..
 
+## git remote
+local repo에서 원격 저장소(remote repo)로 보내기 위해선 절차가 필요하다.
+
+1. local repo에서 원격 저장소를 지정한다.
+ * git remote add origin(원격 저장소 이름, 자유롭게 해도 좋지만 원칙적으로 origin 사용) <원격저장소 주소> : 원격 저장소의 주소를 origin 이라는 이름으로 별명을 지어서 설정한다.
+  * git remote : 위에서 orgin을 설정했다면, 원격 저장소의 주소를 알려준다.
+  
+2. 지정된 원격 저장소에 push를 하면 local repo의 있는 자료들이 업로드 된다.
+ * git push : 원격 저장소에 파일 업로드
+ * git push --set-upstream origin master : 처음 push를 한다면 이렇게 하자. 
