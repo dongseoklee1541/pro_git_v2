@@ -25,5 +25,5 @@ master 상태일때 Merge해야 한다.(checkout master) 파일의 이름이 다
 
 ### conflict
 만약 merge를 할때, 같은 파일의 같은 라인이 동시에 변경이 되있다면 git은 merge할수 없는 상황이라고 알려준다. 이때 사용자가 직접 수정한 뒤
-merge를 해줘야 한다.
+merge를 해줘야 한다..
 
