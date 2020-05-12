@@ -1,6 +1,6 @@
 # CH.07 IP주소 자동할당, 변환과 주소매핑, 에러보고
 
-## DHCP 와 NAT
+# DHCP 와 NAT
 
 ### DHCP(Dynamic Host Configuration Protocol)
 
@@ -48,7 +48,7 @@ IP주소와 MAC 주소를 연결시키는 테이블을 고정적으로 생성하
 
 > 즉 ARP로 알아 내야할 MAC주소의 IP주소를 뿌려서 알아내면 해당 IP에 매핑을 시키기 때문에 주소 매핑이라고 한다. 
 
-## 에러보고(ICMP, The Internet Control Message Protocol)
+# 에러보고(ICMP, The Internet Control Message Protocol)
 IP의 단점을 보완하기 위해서 제공, IP 에러제어와 관리 기능이 부족하여 이를 보완하기 위해 제공된다.
 
 * 에러 보고 메시지(Error-reporting messages) : 들어오는 데이터에 에러가 있는지 없는지 확인
@@ -57,3 +57,38 @@ IP의 단점을 보완하기 위해서 제공, IP 에러제어와 관리 기능�
 
 ICMP는 에러를 정정하지는 않고 단순히 보고만 수행한다.
 
+### 에러 보고 기능
+* 목적지 도달 불가(Destination unreachable)
+  * IP 패킷을 전달할 수 없을 때, 해당 패킷은 폐기
+  * 목적지 도달불가 메시지를 송신지로 전송
+  
+* 송신지 조절(Source quench)
+  * 라우터나 컴퓨터는 혼잡이 발생하면 해당 패킷은 폐기 : 너무 많이 들어오면 없애버림
+  * 송신지로 송신지 조절 메시지 전송 : 너무 많아.. 좀 줄여 (수도꼭지를 틀어 막듯이 알려준다)
+  
+* 시간 초과(Time exceeded)
+  * 라우터는 TTL 필드의 값이 0인 패킷은 폐기 : TTL은 통신장치를 거칠때마다 1씩(일반적으로) 감소
+  * 송신지로 시간초과 메시지가 발생 : TTL이 0이 되면 알려줌 
+  * 단편화된 메시지가 모두 도착하지 못해 완전한 하나의 패킷을 조합할 수 없을때 시간 초과 메시지가 발생 : 단편화되어서 오면, 어차피 안될거 버리고 알려줌 
+  
+* 파라미터 문제(Parameter problem)
+  * IP 패킷 헤더의 정보 중에서 처리할 수 없는 부분을 발견시
+  
+* 경로 재설정 (Redirection)
+  * 잘못된 라우터로 패킷을 전달하는 경우
+  
+## 질의 응답(Query) : 관리 기능
+ICMP는 네트워크 문제를 진단하기 위한 행위를 할 수 있음
+
+* 에코 요청 및 응답(Echo request and reply) : 네트워크가 문제가 있는지 체크하는 것, 야 너 죽었어? 살았어? 살아있는거 맞아? Request하면 reply가 와야하는거니까.
+  * ex) ping(핑) : 원격지의 컴퓨터가 살아있는지 죽어있는지 체크하는데 많이 사용
+
+* 타임 스탬프 요청 및 응답(Time-stamp request and reply) : 야 너 지금 시간이 어떻게 돼?
+
+* 주소 마스크 요청 및 응답(Address mask request and reply) : 마스크 값이 어떻게 돼?
+
+* 라우터 요청 및 응답(Router solicitation and advetisement) : 라우팅 정보를 요청하고 그것에 대한 응답
+
+
+  
+  
