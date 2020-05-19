@@ -35,3 +35,4 @@ windows에서 다른 컴퓨터로 접속하기 위해서 SSH를 쓰고 싶지만
 
 * 쁘띠(PuTTY) 사용하기 : ssh 뿐만 아니라 Telnet도 가능하다.
 
+* git-bash : git bash도 가능
